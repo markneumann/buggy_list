@@ -27,6 +27,7 @@ app.controller('dashboard', ['$scope', 'sessionFactory', 'usersFactory', 'bucket
     });
   }
   this.update_bucket = function(data){
+    console.log('bf.update', data);
     bf.update(data, this.usersshow);
   }
 

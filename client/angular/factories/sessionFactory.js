@@ -13,6 +13,7 @@ app.factory('sessionFactory', ['$http', function($http) {
     logged_in = {};
   }
   session_factory.getUser = function(){
+    console.log('sf logged_in = ', logged_in);
     return logged_in;
   }
   session_factory.setUser = function(data){

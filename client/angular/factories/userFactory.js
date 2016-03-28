@@ -17,8 +17,9 @@ app.factory('usersFactory', ['$http', function($http) {
     })
   }
   uf.show2 = function(data, callback){
-    console.log('uf.show2 path');
+    console.log('uf.show2', data);
     $http.get('/users/'+data).then(function(data){
+      console.log('inside show2 ', data.data);
       callback(data.data);
     })
   }

@@ -38,7 +38,7 @@ function BucketObj(){
             res.json(bucketList);
             return;
           });
-      // res.json(data);
+       res.json(data);  //why commented out?
     });
   }
 

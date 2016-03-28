@@ -34,6 +34,7 @@ function UserObj(){
 
   };
   this.show = function(req,res){
+    console.log('users.show path', req.params);
     var Users = User.findOne({_id:req.params.id})
     .populate({ //allows population of bucketlists and then _creator(from each bucketlist)
     path: 'bucketlists',

@@ -25,6 +25,7 @@ app.factory('bucketFactory', ['$http', function($http) {
     });
   }
   bucketFactory.update = function(data, callback){
+    console.log('bf.update called ', data);
     $http.put('/bucketlists/'+data).then(callback);
   }
   return bucketFactory;
