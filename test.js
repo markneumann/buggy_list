@@ -46,3 +46,32 @@ function weird_sort(array){
 weird_sort(array);
 console.log(array);
 console.log('hello');
+
+//sore_finger sore_counter
+var finger_id = Math.floor(Math.random()*5+1);
+var finger_times = Math.floor(Math.random()*100);
+
+function finger_counter(finger_id, finger_times){
+  var type;
+  if (finger_id == 1){
+    console.log("type 0");
+    type = 0;
+  }
+  else if (finger_id == 5){
+    type = 2;
+  }
+  else{
+    type = 1;
+  }
+  if (finger_times == 0){
+    return finger_id-1;
+  }
+  var count;
+  var functions = [function(){return (((finger_times-1)*8)+1);}, function(){return (Math.ceil((finger_times-1)/2)*6 + Math.floor((finger_times-1)/2)*2 + finger_id);}, function(){return ((finger_times-1)*8 +5);} ];
+  console.log(finger_times);
+  console.log(type);
+  count = functions[type]();
+  return count;
+  // your solution goes forwards -- you
+}
+console.log(finger_counter(1,0));
