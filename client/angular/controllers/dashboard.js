@@ -14,14 +14,16 @@ app.controller('dashboard', ['$scope', 'sessionFactory', 'usersFactory', 'bucket
   }
   this.index();
   this.usersshow= function(){uf.show(_this.user, function(data){
-    console.log(data);
+    console.log('usersshow data = ',data);
     _this.user = data;
     sf.setUser = _this.user;
     });
   }
   this.usersshow();
   this.submit_list = function(){
+    console.log('dashboard submit_list');
     bf.create(_this.bucketlist, _this.user, function(){
+      console.log('_this.bucketlist =', _this.bucketlist);
       _this.usersshow();
       _this.bucketlist = {};
     });

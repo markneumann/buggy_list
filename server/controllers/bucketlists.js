@@ -11,7 +11,7 @@ function BucketObj(){
     req.body.completed = false;
     // req.body._creator
     var bucketList = new BucketList(req.body);
-    console.log(bucketList);
+    console.log('new bucketList = ',bucketList);
     bucketList.save(function (err, bucket_list) {
       if (err) {
         catch_errors(res,err);
@@ -25,7 +25,6 @@ function BucketObj(){
         catch_errors(res,err);
         return;
       }
-      console.log(data.completed);
       data.completed = !data.completed;
       console.log(data.completed);
         //set data properties based on req.body

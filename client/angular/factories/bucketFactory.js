@@ -3,7 +3,7 @@ app.factory('bucketFactory', ['$http', function($http) {
   bucketFactory.create = function(data, creator, callback){
     data._creator = creator._id;
     $http.post('/bucketlists', data).then(function(newdata){
-      console.log(newdata);
+      console.log('newdata = ',newdata);
     if (!newdata.data.errors){
       if (data['users']){
       for (var i = 0; i < data['users'].length; i ++){
