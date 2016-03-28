@@ -58,6 +58,7 @@ function UserObj(){
           return;
           }
           console.log(data);
+          res.json(data);
       });
   };
   this.showByVar = function(req,res){

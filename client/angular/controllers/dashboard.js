@@ -1,7 +1,7 @@
-app.controller('dashboard', ['$scope', 'sessionFactory', 'userFactory', 'bucketFactory', '$location', function($scope, sf, uf, bf, loc) {
+app.controller('dashboard', ['$scope', 'sessionFactory', 'usersFactory', 'bucketFactory', '$location', function($scope, sf, uf, bf, loc) {
   var _this = this;
   this.user = sf.getUser();
-  console.log(this.user);
+  console.log('this.user at top', this.user);
   if (Object.keys(this.user).length == 0){
     loc.url('/');
   }
@@ -9,7 +9,7 @@ app.controller('dashboard', ['$scope', 'sessionFactory', 'userFactory', 'bucketF
 
   this.index = function(){uf.index(function(data){
       _this.users = data;
-      console.log(_this.users);
+      console.log('_this.users at dashboard index', _this.users);
     });
   }
   this.index();

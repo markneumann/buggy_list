@@ -11,11 +11,13 @@ app.factory('usersFactory', ['$http', function($http) {
     });
   }
   uf.show = function(data, callback){
+    console.log('uf.show path', data);
     $http.get('/users/'+data._id).then(function(data){
       callback(data.data);
     })
   }
   uf.show2 = function(data, callback){
+    console.log('uf.show2 path');
     $http.get('/users/'+data).then(function(data){
       callback(data.data);
     })

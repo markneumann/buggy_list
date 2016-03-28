@@ -2,7 +2,8 @@
 var express=require('express'),
 app = express(),
 path = require('path');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());   //missing
 
 // gets static files from client as well as bower_components
 app.use(express.static(path.join(__dirname, './client')));
@@ -15,4 +16,5 @@ require('./server/config/routes.js')(app);
 //allows us to integrate sockets
 var http = require('http').Server(app);
 // server on!
+console.log('listening on 8000');
 http.listen(8000, function() {});

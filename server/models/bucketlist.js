@@ -13,4 +13,4 @@ var BucketSchema= new mongoose.Schema({
 
 // change the name to lowercase, model arg1 - lowercase name of collection
 // model arg2, reference to the schema
-mongoose.model('bucketlissts', BucketSchema);
+mongoose.model('bucketlists', BucketSchema);

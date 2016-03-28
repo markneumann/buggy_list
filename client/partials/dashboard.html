@@ -5,7 +5,7 @@
   <input type = 'text' placeholder = 'Description' ng-model = "dash.bucketlist.description">
   <select   ng-options="user as user.name for user in dash.users | filter:{_id:'!'+dash.user._id}" multiple="true" ng-model = 'dash.bucketlist.users'>
   </select>
-  <button ng-click = 'submit_list();'>Submit List</button>
+  <button ng-click = 'dash.submit_list();'>Submit List</button>
 </form>
 <h3>Before I die I want to:</h3>
 <h4 ng-repeat = "bucketlist in dash.user.bucketlists">

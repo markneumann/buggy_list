@@ -1,5 +1,6 @@
 //basic model
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var UsersSchema= new mongoose.Schema({
   name:{type: String, required: true, unique :true},
